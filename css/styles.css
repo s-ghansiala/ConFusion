@@ -35,5 +35,13 @@ body{
 }
 
 .navbar-dark {
-     background-color: #512DA8;
+    background-color: #512DA8;
+}
+
+.BookTable_Margin {
+    margin: 50px 0px 50px 0px;
+}
+
+.BookTable_ButtonSpace{
+    margin:20px;
 }
