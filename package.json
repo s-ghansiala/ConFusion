@@ -18,15 +18,18 @@
     "bootstrap-social": "^5.1.1"
   },
   "comments": {
-    "to_install": "npm install --save-dev onchange@3.3.0 parallelshell@3.0.2",
+    "to_install": "npm install --save-dev onchange@3.3.0 npm install parallelshell@3.0.2 npm install -g less@2.7.2 npm install --save-dev node-sass@4.7.2",
     "to_scripts": {
       "watch:scss": "onchange 'css/*.scss' -- npm run scss",
-      "watch:all": "parallelshell 'npm run watch:scss' 'npm run lite'"
+      "watch:all": "parallelshell 'npm run watch:scss' 'npm run lite'",
+      "scss": "node-sass -o css/ css/"
     },
     "NOTE": {
         "You will also update the start script as follows:": {
             "start": "npm run watch:all",
         },
-     },    
+        "To compile the Less file into a CSS file:": "lessc styles.less styles.css",
+        "In order to transform the Scss file to a CSS": "npm run scss",
+     },
   },
 }
