@@ -16,5 +16,17 @@
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.12.1",
     "bootstrap-social": "^5.1.1"
-  }
+  },
+  "comments": {
+    "to_install": "npm install --save-dev onchange@3.3.0 parallelshell@3.0.2",
+    "to_scripts": {
+      "watch:scss": "onchange 'css/*.scss' -- npm run scss",
+      "watch:all": "parallelshell 'npm run watch:scss' 'npm run lite'"
+    },
+    "NOTE": {
+        "You will also update the start script as follows:": {
+            "start": "npm run watch:all",
+        },
+     },    
+  },
 }
