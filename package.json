@@ -16,39 +16,5 @@
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.12.1",
     "bootstrap-social": "^5.1.1"
-  },
-  "comments": {
-    "to_install": "npm install --save-dev onchange@3.3.0
-                   npm install parallelshell@3.0.2
-                   npm install -g less@2.7.2(sudo)
-                   npm install --save-dev node-sass@4.7.2
-                   npm install --save-dev rimraf@2.6.2
-                   npm -g install copyfiles@2.0.0(sudo)
-                   npm -g install imagemin-cli@3.0.0(sudo)
-                   npm install --save-dev usemin-cli@0.5.1 cssmin@0.4.3 uglifyjs@2.4.11 htmlmin@0.0.7",
-    "to_scripts": {
-      "watch:scss": "onchange 'css/*.scss' -- npm run scss",
-      "watch:all": "parallelshell 'npm run watch:scss' 'npm run lite'",
-      "scss": "node-sass -o css/ css/",
-      "clean": "rimraf dist",
-      "copyfonts": "copyfiles -f node_modules/font-awesome/fonts/* dist/fonts",
-      "imagemin": "imagemin img/* --out-dir='dist/img",
-      "usemin": "usemin contactus.html -d dist --htmlmin -o dist/contactus.html &&
-                 usemin aboutus.html -d dist --htmlmin -o dist/aboutus.html &&
-                 usemin index.html -d dist --htmlmin -o dist/index.html",
-      "build": "npm run clean && npm run imagemin && npm run copyfonts && npm run usemin",
-
-    },
-    "NOTE": {
-        "You will also update the start script as follows:": {
-            "start": "npm run watch:all",
-        },
-        "To compile the Less file into a CSS file:": "lessc styles.less styles.css",
-        "In order to transform the Scss file to a CSS": "npm run scss",
-        "Cleaning up a Distribution Folder": "npm run clean",
-        "To build the distribution folder, you can type the following at the prompt:
-         You can now copy the contents of this folder to a web server that hosts your website.": "npm run build",
-
-     },
-  },
+  }
 }
